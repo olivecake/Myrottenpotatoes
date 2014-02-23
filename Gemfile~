@@ -35,4 +35,13 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+group :development, :test do
+  gem 'debugger'
+end
+
+group :production do
+  gem 'pg'
+end
+
+#use Haml for templates
+gem 'haml'
