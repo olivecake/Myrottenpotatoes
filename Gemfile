@@ -5,8 +5,7 @@ gem 'rails', '3.2.16'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
+gem 'pg', :groups => [:development, :test, :production]
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -39,8 +38,5 @@ group :development, :test do
   gem 'debugger'
 end
 
-group :production do
-  gem 'pg'
-end
 #use Haml for templates
 gem 'haml'
