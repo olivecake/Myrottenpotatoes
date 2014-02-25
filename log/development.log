@@ -367,3 +367,363 @@ Served asset /jquery_ujs.js - 304 Not Modified (38ms)
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-23 04:04:42 -0400
 Served asset /application.js - 304 Not Modified (90ms)
 Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-24 21:36:19 -0400
+Connecting to database specified by database.yml
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-02-24 21:36:20 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 127.3ms
+
+ActionView::Template::Error (Invalid attribute list: "(:class=>title_header)".):
+    4: %table#movies
+    5:   %thead
+    6:     %tr
+    7:       %th(:class=>title_header)= link_to "Movie Title", movies_path(:sortby => "title"), :id => "title header"
+    8:       %th Rating
+    9:       %th(:class=>release_date_header)= link_to "Release Date", movies_path(:sortby => "released"), :id => "release_date_header"
+    10:       %th More Info
+  app/views/movies/index.html.haml:7
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (54.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-02-24 21:42:37 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (6.5ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 20.1ms
+
+ActionView::Template::Error (Invalid attribute list: "(:class=> @sortby=='title' ? 'hilite' : '')".):
+    4: %table#movies
+    5:   %thead
+    6:     %tr
+    7:       %th(:class=> @sortby=='title' ? 'hilite' : '')= link_to "Movie Title", movies_path(:sortby => "title"), :id => "title header"
+    8:       %th Rating
+    9:       %th(:class=> @sortby=='release_date' ? 'hilite' : '')= link_to "Release Date", movies_path(:sortby => "released"), :id => "release_date_header"
+    10:       %th More Info
+  app/views/movies/index.html.haml:7
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (27.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-02-24 21:43:10 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 29.9ms
+
+ActionView::Template::Error (Invalid attribute list: "(:class=> @orderby=='title' ? 'hilite' : '')".):
+    4: %table#movies
+    5:   %thead
+    6:     %tr
+    7:       %th(:class=> @orderby=='title' ? 'hilite' : '')= link_to "Movie Title", movies_path(:sortby => "title"), :id => "title header"
+    8:       %th Rating
+    9:       %th(:class=> @orderby=='release_date' ? 'hilite' : '')= link_to "Release Date", movies_path(:sortby => "released"), :id => "release_date_header"
+    10:       %th More Info
+  app/views/movies/index.html.haml:7
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (9.9ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.5ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-02-24 21:43:44 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (60.7ms)
+Completed 200 OK in 289.9ms (Views: 282.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-24 21:43:45 -0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-24 21:43:45 -0400
+Served asset /jquery.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-24 21:43:45 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (39ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-24 21:43:45 -0400
+Served asset /application.js - 304 Not Modified (63ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2014-02-24 21:43:52 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (194.8ms)
+Completed 200 OK in 220.2ms (Views: 219.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-24 21:43:53 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-24 21:43:53 -0400
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-24 21:43:53 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-24 21:43:53 -0400
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2014-02-24 21:44:04 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jhmpoaHEB8MZls4Gfedu5O5wMqAzvse3CcFuQa/S4VE=", "movie"=>{"title"=>"Pride and Prejudice", "rating"=>"PG", "release_date(1i)"=>"2014", "release_date(2i)"=>"2", "release_date(3i)"=>"25"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 9.8ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: title, rating, release_date(1i), release_date(2i), release_date(3i)):
+  app/controllers/movies_controller.rb:18:in `create'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.1ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2014-02-24 21:45:02 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jhmpoaHEB8MZls4Gfedu5O5wMqAzvse3CcFuQa/S4VE=", "movie"=>{"title"=>"Pride and Prejudice", "rating"=>"PG", "release_date(1i)"=>"2014", "release_date(2i)"=>"2", "release_date(3i)"=>"25"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 0.6ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: title, rating, release_date(1i), release_date(2i), release_date(3i)):
+  app/controllers/movies_controller.rb:18:in `create'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.4ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.7ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (56.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-02-24 21:45:06 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 61.7ms (Views: 53.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-24 21:45:06 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-24 21:45:06 -0400
+Served asset /jquery.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-24 21:45:06 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-24 21:45:06 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2014-02-24 21:45:12 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 28.1ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-24 21:45:12 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-24 21:45:12 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-24 21:45:12 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-24 21:45:12 -0400
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2014-02-24 21:45:22 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jhmpoaHEB8MZls4Gfedu5O5wMqAzvse3CcFuQa/S4VE=", "movie"=>{"title"=>"Pride and Prejudice", "rating"=>"PG", "release_date(1i)"=>"2014", "release_date(2i)"=>"2", "release_date(3i)"=>"25"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 1.0ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: title, rating, release_date(1i), release_date(2i), release_date(3i)):
+  app/controllers/movies_controller.rb:18:in `create'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.9ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.7ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2014-02-24 21:48:50 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jhmpoaHEB8MZls4Gfedu5O5wMqAzvse3CcFuQa/S4VE=", "movie"=>{"title"=>"Pride and Prejudice", "rating"=>"PG", "release_date(1i)"=>"2014", "release_date(2i)"=>"2", "release_date(3i)"=>"25"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 4.3ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: title, rating, release_date(1i), release_date(2i), release_date(3i)):
+  app/controllers/movies_controller.rb:18:in `create'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (70.8ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.0ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (98.9ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-02-24 21:51:34 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (7.7ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 48.8ms (Views: 37.5ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-24 21:51:34 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-24 21:51:34 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-24 21:51:34 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-24 21:51:35 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2014-02-24 21:51:37 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (19.1ms)
+Completed 200 OK in 36.9ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-24 21:51:37 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-24 21:51:37 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-24 21:51:37 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-24 21:51:37 -0400
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2014-02-24 21:51:45 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jhmpoaHEB8MZls4Gfedu5O5wMqAzvse3CcFuQa/S4VE=", "movie"=>{"title"=>"The Little Mermaid", "rating"=>"G", "release_date(1i)"=>"2014", "release_date(2i)"=>"2", "release_date(3i)"=>"25"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 0.7ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: title, rating, release_date(1i), release_date(2i), release_date(3i)):
+  app/controllers/movies_controller.rb:18:in `create'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.9ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.4ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-02-24 21:58:30 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (3.6ms)
+Compiled application.css  (1ms)  (pid 5602)
+Compiled application.js  (13ms)  (pid 5602)
+Completed 200 OK in 430.2ms (Views: 419.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-24 21:58:32 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-24 21:58:32 -0400
+Served asset /application.js - 200 OK (83ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-24 21:58:32 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-24 21:58:32 -0400
+Served asset /application.css - 200 OK (19ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2014-02-24 21:58:38 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (20.3ms)
+Completed 200 OK in 52.3ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-24 21:58:38 -0400
+Served asset /application.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-24 21:58:38 -0400
+Served asset /jquery.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-24 21:58:38 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (20ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2014-02-24 21:58:44 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jhmpoaHEB8MZls4Gfedu5O5wMqAzvse3CcFuQa/S4VE=", "movie"=>{"title"=>"The Little Mermaid", "rating"=>"G", "release_date(1i)"=>"2014", "release_date(2i)"=>"2", "release_date(3i)"=>"25"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 5.4ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: title, rating, release_date(1i), release_date(2i), release_date(3i)):
+  app/controllers/movies_controller.rb:18:in `create'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (69.3ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2014-02-24 21:58:44 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jhmpoaHEB8MZls4Gfedu5O5wMqAzvse3CcFuQa/S4VE=", "movie"=>{"title"=>"The Little Mermaid", "rating"=>"G", "release_date(1i)"=>"2014", "release_date(2i)"=>"2", "release_date(3i)"=>"25"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 0.9ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: title, rating, release_date(1i), release_date(2i), release_date(3i)):
+  app/controllers/movies_controller.rb:18:in `create'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.2ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2014-02-24 21:58:44 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jhmpoaHEB8MZls4Gfedu5O5wMqAzvse3CcFuQa/S4VE=", "movie"=>{"title"=>"The Little Mermaid", "rating"=>"G", "release_date(1i)"=>"2014", "release_date(2i)"=>"2", "release_date(3i)"=>"25"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 0.6ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: title, rating, release_date(1i), release_date(2i), release_date(3i)):
+  app/controllers/movies_controller.rb:18:in `create'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (85.0ms)

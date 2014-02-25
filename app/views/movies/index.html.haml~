@@ -4,7 +4,7 @@
 %table#movies
   %thead
     %tr
-      %th <a href="http://immense-inlet-8179.herokuapp.com/movie">Movie Title</a>
+      %th Movie Title
       %th Rating
       %th Release Date
       %th More Info
