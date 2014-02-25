@@ -1,10 +1,9 @@
--# in app/views/movies/new.html.haml
 %h1 Create New Movie
 
-= form_tag movies_path, :method => :post do
+= form_tag movies_path do
 
   = label :movie, :title, 'Title'
-  = text_field :movie, :title
+  = text_field :movie, 'title'
 
   = label :movie, :rating, 'Rating'
   = select :movie, :rating, ['G','PG','PG-13','R','NC-17']

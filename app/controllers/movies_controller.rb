@@ -1,14 +1,13 @@
-# This file is app/controllers/movies_controller.rb
 class MoviesController < ApplicationController
-
-  def index
-    @movies = Movie.all
-  end
 
   def show
     id = params[:id] # retrieve movie ID from URI route
-    @movie = Movie.find(id) # Look up movie by unique ID
+    @movie = Movie.find(id) # look up movie by unique ID
     # will render app/views/movies/show.<extension> by default
+  end
+
+  def index
+    @movies = Movie.all
   end
 
   def new
